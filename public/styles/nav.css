@@ -19,4 +19,21 @@
     line-height: 2em;
 }
 
+#nav-bar button.compose {
+    float: right;
+    height: 75%;
+    width: 120px;
+    margin: 10px;
+    margin-right: 100px;
+    border-radius: 5px;
+    font-size: 1.3em;
+    color: #00a087;
+    background-color: #cfeaf3;
+    border: 1px solid black;
+}
+
+#nav-bar button.compose {
+    color: black;
+    background-color: white;
+}
 

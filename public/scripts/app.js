@@ -106,31 +106,34 @@ function createTweetElement (tweetData) {
 //   }
 // ];
 
+//
 function renderTweets(tweets) {
   // loops through tweets
     // calls createTweetElement for each tweet
-    // takes return value and appends it to the tweets container
-    // is tweet-container an array or object?
+    // takes return value and appends it to the tweets container   // is tweet-container an array or object?
     let tweetsArray = []
-    for(let i = 0; i < tweets.length; i++) {
-      tweetsArray.push(createTweetElement(tweets[i]))
+    for(let i = tweets.length -1; i >= 0; i--) {
+      $('.tweet-container').append(createTweetElement(tweets[i]));
+      // tweetsArray.push(createTweetElement(tweets[i]))
 
     }
 
-    return tweetsArray
+    // return tweetsArray
 }
 
 // let tweetsFinal= renderTweets(data);
 
 $(function() {
   var $form = $('.new-tweet form');
+  var $text = $form.find('textarea')
   $form.on('submit', function (event) {
+    var chrisVal = $text.val()
+
     event.preventDefault()
-    console.log($(this).serialize().length);
-    if($(this).serialize() === "text=") {
+    if(chrisVal === "") {
       return alert("400 Error: Empty Tweet entered");
     }
-    else if($(this).serialize().length > 145) {
+    if(chrisVal.length > 140) {
       return alert("400 Error: Over 140 Characters");
     }
     console.log('Submitted, performing ajax call...');
@@ -140,6 +143,8 @@ $(function() {
       data: $(this).serialize(),
       success: function (newTweet) {
         console.log('Success: ', newTweet);
+        $('.tweet-container').empty()
+        loadTweets()
         // $form.replaceWith(morePostsHtml);
         }
     });
@@ -159,18 +164,37 @@ function loadTweets() {
     success: function (result) {
       console.log(result)
         let tweetsFinal = renderTweets(result);
-        $('.tweet-container').append(tweetsFinal)
-        console.log($'.tweet-container')
-      }
+        var updatedTweet = $('.tweet-container').append(tweetsFinal)
+         },
+
+
+        // createTweetElement(updatedTweet)
+
     });
   // });
 }
-
 loadTweets()
+
+$('button.compose').on('click', function(){
+  $('.new-tweet').toggle();
+  $('textarea').select();
 });
+
+
+
+// $('.compose').on('click', function(){
+//   $('.new-tweet').hide();
+// })
+
+
+
+});
+
 
 
 //user submits form.  want the content of the form to appear on page, with new article
 //already is submitting to /tweets
+
+
 
 
