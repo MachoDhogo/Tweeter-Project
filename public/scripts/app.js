@@ -6,21 +6,27 @@
 $(document).ready(function() {
 
 function createTweetElement (tweetData) {
+  function escape(str) {
+    return str;
+    var div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
 
   let $tweet = $("<article>").addClass("the-tweet")
   let name = tweetData.user.name
   let userIcon = tweetData.user.avatars.small
   let handle = tweetData.user.handle
 
-  let $header = $("<header> <img src =" + userIcon + "></img><h3>" + name + "</h3><span>" + handle +  "</span></header>");
+  let $header = $(`<header> <img src = ${escape(userIcon)} ></img><h3> ${escape(name)} </h3><span> ${escape(handle)} </span></header>`);
   $tweet.append($header)
 
   let tweetBody = tweetData.content.text
-  let $section = $("<section class='tweet-body'><p>" + tweetBody + "</p></section>");
+  let $section = $(`<section class='tweet-body'><p> ${escape(tweetBody)} </p></section>`);
   $tweet.append($section)
 
   let timestamp = new Date(tweetData.created_at);
-  let $footer = $("<footer><p>" + timestamp +  "</p><i class='fas fa-flag'></i><i class='fas fa-retweet'></i><i class='fas fa-heart'></i></footer>")
+  let $footer = $(`<footer><p> ${escape(timestamp)} </p><i class='fas fa-flag'></i><i class='fas fa-retweet'></i><i class='fas fa-heart'></i></footer>`)
   $tweet.append($footer)
 
   $tweet.append("</article>")
