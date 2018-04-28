@@ -1,9 +1,12 @@
 # Tweeter Project
 
-Tweeter is a single-page Twitter clone that allows user to submit a tweet of up to 140 characters.  It was created using HTML, CSS, JS, jQuery and Ajax for the front-end, and Node, Express and MongoDB for the back-end.
+Tweeter is a single-page Twitter clone that allows user to submit a tweet of up to 140 characters.  The page dynamically renders via Ajax so the user stays on the same page after a tweet is submitted.  It was created using HTML, CSS, JS, jQuery and Ajax for the front-end, and Node, Express and MongoDB for the back-end.
 
 
-Add pics here
+## Screenshots
+
+!['Screenshots of main page'](https://github.com/MachoDhogo/Tweeter-Project/blob/cf71f28b24fde9a6535e47c38ca123551f716b08/docs/TweeterMainScreen.png?raw=true)
+!['Screenshot of tweet box'](https://github.com/MachoDhogo/Tweeter-Project/blob/cf71f28b24fde9a6535e47c38ca123551f716b08/docs/Tweet-box.png?raw=true)
 
 
 
@@ -24,6 +27,3 @@ Add pics here
 - Md5: ^2.2.1,
 - Mongodb": ^2.2.35
 
-## Getting Started
-- Install all dependencies with npm install command
-- Run the server using the npm run start command
