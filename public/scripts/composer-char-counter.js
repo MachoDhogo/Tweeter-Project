@@ -1,10 +1,9 @@
 $(document).ready(function() {
   var maxChar = 140;
 
-
-  $(".new-tweet textarea").on("keyup", function() {
+  $(".new-tweet textarea").on("input", function() {
     var remaining = (maxChar - this.textLength);
-    var counter = $(this).parent().find('.counter');
+    var counter = $(this).parent().find('.counter')
     if(remaining >= 0) {
      counter.text(remaining);
     }
@@ -13,7 +12,7 @@ $(document).ready(function() {
     }
   });
 
- $(".new-tweet textarea").on("keyup", function() {
+ $(".new-tweet textarea").on("input", function() {
     var remaining = (maxChar - this.textLength);
     var counter = $(this).parent().find('.counter-negative');
     if(remaining < 0) {
@@ -24,16 +23,3 @@ $(document).ready(function() {
     }
   });
 });
-
-
-
-
-
-
-// find counter
-// calculate remaining
-// update counter
-
-// prevent typing more
-
-
