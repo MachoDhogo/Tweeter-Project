@@ -21,9 +21,15 @@ body {
   font-family: Roboto Condensed, sans-serif;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+main.container  {
+    display: inline-block;
+    border-radius: 0;
+    padding-right: 2em;
+    padding-left: 2em;
+    width: 450px;
+    margin: auto;
+    background-color: white;
+}
 
 
 

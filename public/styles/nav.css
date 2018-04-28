@@ -32,7 +32,7 @@
     border: 1px solid black;
 }
 
-#nav-bar button.compose {
+#nav-bar button:hover.compose {
     color: black;
     background-color: white;
 }
