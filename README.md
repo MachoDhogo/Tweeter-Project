@@ -5,10 +5,8 @@ Tweeter is a single-page Twitter clone that allows user to submit a tweet of up 
 
 ## Screenshots
 
-!['Screenshots of main page'](https://github.com/MachoDhogo/Tweeter-Project/blob/cf71f28b24fde9a6535e47c38ca123551f716b08/docs/TweeterMainScreen.png?raw=true)
-!['Screenshot of tweet box'](https://github.com/MachoDhogo/Tweeter-Project/blob/cf71f28b24fde9a6535e47c38ca123551f716b08/docs/Tweet-box.png?raw=true)
-
-
+<img src="https://github.com/chrisliew/tweeter/blob/master/docs/TweeterMainScreen.png" height="400px" width="1200px">
+<img src="https://github.com/chrisliew/tweeter/blob/master/docs/Tweet-box.png">
 
 ## Getting Started
 
