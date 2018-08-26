@@ -68,7 +68,7 @@ $(function() {
       success: function (newTweet) {
         console.log('Success: ', newTweet);
         $('.new-tweet textarea').val("");
-        $('.tweet-container').empty();
+        // $('.tweet-container').empty();
         $('.counter').text(140);
 
         loadTweets();

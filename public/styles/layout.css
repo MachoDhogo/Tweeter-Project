@@ -5,6 +5,7 @@
  */
 html {
   box-sizing: border-box;
+
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -22,13 +23,17 @@ body {
 }
 
 main.container  {
-    display: inline-block;
     border-radius: 0;
     padding-right: 2em;
     padding-left: 2em;
     width: 450px;
     margin: auto;
     background-color: white;
+}
+
+.space {
+  margin: auto;
+  opacity: 0;
 }
 
 
